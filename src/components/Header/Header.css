@@ -1,0 +1,39 @@
+header.sticky {
+    position: sticky;
+    top: 0;
+    border: 2px solid rgb(110, 117, 110);
+    z-index: 1000;
+    height: 100px;
+    background-image: linear-gradient(rgb(248, 122, 13), rgb(241, 245, 6));
+    padding: 0 20px;
+}
+
+.header-content {
+    margin-top: 8px;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+    height: 80px; 
+    float: left;
+}
+
+
+.contact-item {
+    line-height: 1.3; 
+    text-align: center; 
+    margin-right: 120px; 
+    display: block; /* lines one under another */
+}
+
+
+/* h1 {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+} */
