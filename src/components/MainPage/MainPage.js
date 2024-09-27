@@ -10,10 +10,37 @@ import pizza3 from '../../assets/images/pizza3.png';
 import pizza4 from '../../assets/images/pizza4.png'; 
 import pizza5 from '../../assets/images/pizza5.png'; 
 import pizza6 from '../../assets/images/pizza6.png'; 
-
+import businessman from '../../assets/images/businessman.png'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'; 
+import { motion } from 'framer-motion';
 
 
 function MainPage() {
+
+  //Element to appear after some time:
+
+  // const [isHide, setIsHide] = useState(true);
+  // setTimeout(() => setIsHide(false), 5000); 
+  /* {!isHide ? <div>show after 5 seconds</div> : null} */
+  
+
+  // element to appear on scroll: 
+
+  // import { motion } from 'framer-motion'; 
+  /* 
+
+    <motion.img 
+           initial={{opacity: 0, y: 50}} - at the beginning not visible, y - to appear on vertical scroll
+           whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.5}}} - on scroll appears
+           viewport={{once: false, amount: 1}} once: false - several times appear if 
+                                                we scroll down/up, amount: 1 - appears 100% 
+                                                of an element, .5 - 50%
+                                                transition to appear not very quick 
+
+  */ 
+
+
   return (
     <div className="wrapper"> 
     {<Header />} 
@@ -70,8 +97,22 @@ function MainPage() {
         </div>
         </div>
           
-      </div>
-        
+      </div> 
+
+      <motion.div 
+        initial={{opacity: 0, y: 50}} 
+        whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.9}}}
+        viewport={{once: false, amount: 1}}
+        className='social-medias'>
+          <div className='media-links'>
+            <b>Ми в соц. мережах</b>
+              <p><FontAwesomeIcon icon={faFacebook} className="fa-icon" /><a href="https://www.facebook.com/">Facebook Link</a></p>
+              <p><FontAwesomeIcon icon={faInstagram} className="fa-icon" /><a href="https://www.instagram.com/">Instagram Link</a></p>
+              <p><FontAwesomeIcon icon={faYoutube} className="fa-icon" /><a href="https://www.youtube.com/">YouTube Link</a></p>
+            </div>
+            <img src={businessman} alt="Businessman" className="businessman" />
+      </motion.div>
+      
       {<Footer />}
       
     </div>

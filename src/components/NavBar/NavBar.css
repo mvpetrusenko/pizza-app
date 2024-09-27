@@ -1,28 +1,29 @@
 .header-navbar {
-    width: 100%;
-  }
-  
-  
-  .main-menu {
-    margin: 30px; 
-    display: flex; /* make nav links horizontal */ 
-    justify-content: center;
-  }
+  width: 100%;
+}
 
 
-  nav li {
-    list-style: none; /* remove dot from the list item */
-    margin-right: 50px; /* space between navbar elements */
-  } 
-
-  nav li a {
-    color: rgb(245, 236, 211);
-    text-decoration: none; /* remove link underlined */
-  }
+.main-menu { 
+  display: flex; /* make nav links horizontal */ 
+  justify-content: center; 
+  list-style: none; /* remove dot from the list item */ 
+}
 
 
-  /* image under active navbar link */ 
-  .active {
-    stroke: blue;
-    /* background-image: url('./assets/images/background.jpg'); */
- }
+.navlink {
+  color: aqua; 
+} 
+
+.active, .navlink:hover {
+  background-color: orange; 
+  color: black;
+  background-size: 12px; 
+  padding: 10px;
+  background-repeat: no-repeat; 
+}
+nav li a {
+  color: rgb(245, 236, 211);
+  text-decoration: none; /* remove link underlined */ 
+  margin-right: 50px; /* space between navbar elements */
+}
+

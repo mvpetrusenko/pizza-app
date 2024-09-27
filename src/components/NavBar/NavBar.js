@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../NavBar/NavBar.css'
+// import { Link } from 'react-router-dom';
+import '../NavBar/NavBar.css' 
+import { NavLink } from 'react-router-dom';
 
 
 
-function NavBar() {
+function NavBar() { 
+
   return (
-    <nav className='header-navbar'>
+    <nav className='header-navbar' id='header-navbar'>
       <ul className='main-menu'>
-        <li><Link to="/">Головна</Link></li>
-        <li><Link to="/menu">Меню</Link></li>
-        <li><Link to="/about">О Super Pizza</Link></li>
-        <li><Link to="/delivery">Доставка і оплата</Link></li>
-        <li><Link to="/contacts">Контакти</Link></li>
+        <li><NavLink to="/" activeClassName="active">Головна</NavLink></li>
+        <li><NavLink to="/menu">Меню</NavLink></li>
+        <li><NavLink to="/about">О Super Pizza</NavLink></li>
+        <li><NavLink to="/delivery">Доставка і оплата</NavLink></li>
+        <li><NavLink to="/contacts">Контакти</NavLink></li>
       </ul>
     </nav> 
 
